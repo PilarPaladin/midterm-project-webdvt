@@ -80,7 +80,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
     <main className="page-container">
       <header className="page-header">
         <button className="icon-btn" onClick={() => navigate('/')} aria-label="Back to Dashboard">
-          <ArrowLeftIcon className="w-5 h-5" />
+          <ArrowLeftIcon className="icon-md" />
         </button>
         <h1 className="page-title">Add Transaction</h1>
         <div style={{ width: '40px' }}></div>
@@ -121,7 +121,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
                 onChange={(e) => setAmount(e.target.value)}
               />
             </div>
-            {errors.amount && <span className="error-text"><ExclamationCircleIcon className="w-4 h-4 inline mr-1" />{errors.amount}</span>}
+            {errors.amount && <span className="error-text"><ExclamationCircleIcon className="icon-sm inline mr-1" />{errors.amount}</span>}
           </div>
 
           <div className="form-group">
@@ -133,7 +133,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
-            {errors.title && <span className="error-text"><ExclamationCircleIcon className="w-4 h-4 inline mr-1" />{errors.title}</span>}
+            {errors.title && <span className="error-text"><ExclamationCircleIcon className="icon-sm inline mr-1" />{errors.title}</span>}
           </div>
 
           <div className="form-group">
@@ -155,7 +155,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
                   autoFocus
                 />
                 <button type="button" className="btn-primary" onClick={handleCreateCustomCategory}>
-                  <CheckIcon className="w-4 h-4" />
+                  <CheckIcon className="icon-sm" />
                 </button>
               </div>
             ) : (
@@ -168,7 +168,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
                 {categories.map((cat) => <option key={cat} value={cat}>{cat}</option>)}
               </select>
             )}
-            {errors.category && <span className="error-text"><ExclamationCircleIcon className="w-4 h-4 inline mr-1" />{errors.category}</span>}
+            {errors.category && <span className="error-text"><ExclamationCircleIcon className="icon-sm inline mr-1" />{errors.category}</span>}
           </div>
 
           <div className="form-group">
@@ -180,7 +180,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
               value={date}
               onChange={(e) => setDate(e.target.value)}
             />
-            {errors.date && <span className="error-text"><ExclamationCircleIcon className="w-4 h-4 inline mr-1" />{errors.date}</span>}
+            {errors.date && <span className="error-text"><ExclamationCircleIcon className="icon-sm inline mr-1" />{errors.date}</span>}
           </div>
 
           <div className="form-group">
@@ -195,7 +195,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
           </div>
 
           <button type="submit" className="btn-primary" style={{ marginTop: '8px', padding: '16px' }}>
-            <PlusCircleIcon className="w-5 h-5" />
+            <PlusCircleIcon className="icon-md" />
             <span>Save Transaction</span>
           </button>
         </form>

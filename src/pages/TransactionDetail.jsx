@@ -44,7 +44,7 @@ export default function TransactionDetail({ getTransaction, updateTransaction, d
       <main className="page-container">
         <header className="page-header">
           <button className="icon-btn" onClick={() => navigate('/')}>
-            <ArrowLeftIcon className="w-5 h-5" />
+            <ArrowLeftIcon className="icon-md" />
           </button>
           <h1 className="page-title">Details</h1>
           <div style={{ width: '40px' }}></div>
@@ -90,11 +90,11 @@ export default function TransactionDetail({ getTransaction, updateTransaction, d
     <main className="page-container">
       <header className="page-header">
         <button className="icon-btn" onClick={() => navigate('/')} aria-label="Back">
-          <ArrowLeftIcon className="w-5 h-5" />
+          <ArrowLeftIcon className="icon-md" />
         </button>
         <h1 className="page-title">Transaction Details</h1>
         <button className="icon-btn" onClick={() => setIsEditing(!isEditing)} aria-label="Edit">
-          {isEditing ? <XMarkIcon className="w-5 h-5" /> : <PencilSquareIcon className="w-5 h-5" />}
+          {isEditing ? <XMarkIcon className="icon-md" /> : <PencilSquareIcon className="icon-md" />}
         </button>
       </header>
 
@@ -144,7 +144,7 @@ export default function TransactionDetail({ getTransaction, updateTransaction, d
 
             <div style={{ display: 'flex', gap: '8px', marginTop: '8px' }}>
               <button type="button" className="btn-secondary" style={{ flex: 1 }} onClick={() => setIsEditing(false)}>Cancel</button>
-              <button type="submit" className="btn-primary" style={{ flex: 2 }}><CheckIcon className="w-4 h-4 mr-1 inline" /> Save Changes</button>
+              <button type="submit" className="btn-primary" style={{ flex: 2 }}><CheckIcon className="icon-sm mr-1 inline" /> Save Changes</button>
             </div>
           </form>
         ) : (
@@ -163,16 +163,16 @@ export default function TransactionDetail({ getTransaction, updateTransaction, d
 
             <div className="detail-rows">
               <div className="detail-row">
-                <div className="detail-row-label"><TagIcon className="w-4 h-4" /> Category</div>
+                <div className="detail-row-label"><TagIcon className="icon-sm" /> Category</div>
                 <div className="detail-row-value">{transaction.category}</div>
               </div>
               <div className="detail-row">
-                <div className="detail-row-label"><CalendarDaysIcon className="w-4 h-4" /> Date</div>
+                <div className="detail-row-label"><CalendarDaysIcon className="icon-sm" /> Date</div>
                 <div className="detail-row-value">{transaction.date}</div>
               </div>
               {transaction.notes && (
                 <div className="detail-row">
-                  <div className="detail-row-label"><DocumentTextIcon className="w-4 h-4" /> Notes</div>
+                  <div className="detail-row-label"><DocumentTextIcon className="icon-sm" /> Notes</div>
                   <div className="detail-row-value">{transaction.notes}</div>
                 </div>
               )}
@@ -180,7 +180,7 @@ export default function TransactionDetail({ getTransaction, updateTransaction, d
 
             <footer className="detail-actions">
               <button type="button" className="btn-destructive" style={{ width: '100%' }} onClick={() => setShowDeleteConfirm(true)}>
-                <TrashIcon className="w-4 h-4 mr-1 inline" /> Delete Transaction
+                <TrashIcon className="icon-sm mr-1 inline" /> Delete Transaction
               </button>
             </footer>
           </article>

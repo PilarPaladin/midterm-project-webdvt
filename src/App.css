@@ -431,3 +431,28 @@
   padding: var(--space-6);
   z-index: 200;
 }
+
+/* SVG Icon Sizing & Flex Containment */
+.icon-sm {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.icon-md {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.icon-lg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.icon-xl {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}

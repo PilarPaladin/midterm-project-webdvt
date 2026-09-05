@@ -42,9 +42,9 @@ export default function Summary({ transactions, totalIncome, totalExpense, balan
           </div>
           <button className="btn-secondary" type="button" onClick={toggleTheme}>
             {theme === 'dark' ? (
-              <SunIcon className="w-5 h-5 text-yellow" />
+              <SunIcon className="icon-md text-yellow" />
             ) : (
-              <MoonIcon className="w-5 h-5 text-blue" />
+              <MoonIcon className="icon-md text-blue" />
             )}
             <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
           </button>
@@ -54,7 +54,7 @@ export default function Summary({ transactions, totalIncome, totalExpense, balan
       <section className="stats-grid">
         <article className="stat-card">
           <header className="stat-header">
-            <ArrowTrendingUpIcon className="w-4 h-4 text-green" />
+            <ArrowTrendingUpIcon className="icon-sm text-green" />
             <span>Total Income</span>
           </header>
           <span className="stat-value text-green">
@@ -64,7 +64,7 @@ export default function Summary({ transactions, totalIncome, totalExpense, balan
 
         <article className="stat-card">
           <header className="stat-header">
-            <ArrowTrendingDownIcon className="w-4 h-4 text-red" />
+            <ArrowTrendingDownIcon className="icon-sm text-red" />
             <span>Total Expenses</span>
           </header>
           <span className="stat-value">
@@ -74,7 +74,7 @@ export default function Summary({ transactions, totalIncome, totalExpense, balan
 
         <article className="stat-card full-span">
           <header className="stat-header">
-            <ScaleIcon className="w-4 h-4 text-blue" />
+            <ScaleIcon className="icon-sm text-blue" />
             <span>Net Balance</span>
           </header>
           <span className={`stat-value ${balance >= 0 ? 'text-green' : 'text-red'}`}>
@@ -86,7 +86,7 @@ export default function Summary({ transactions, totalIncome, totalExpense, balan
       <section className="card">
         <header className="section-header" style={{ marginBottom: '16px' }}>
           <div className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <ChartPieIcon className="w-5 h-5 text-blue" />
+            <ChartPieIcon className="icon-md text-blue" />
             Spending Breakdown
           </div>
         </header>

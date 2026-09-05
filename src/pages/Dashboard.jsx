@@ -33,17 +33,17 @@ export default function Dashboard({ transactions, balance, categories }) {
       <section className="card balance-card">
         <div className="balance-info">
           <span className="balance-amount font-rakkas">{formattedBalance}</span>
-          <span className="balance-label">Savings Balance</span>
+          <span className="balance-label">Current Balance</span>
         </div>
 
         <nav className="action-buttons-row">
           <button className="btn-primary" type="button" onClick={() => navigate('/add?type=income')}>
-            <ArrowDownLeftIcon className="btn-icon w-5 h-5" />
-            <span>Save</span>
+            <ArrowDownLeftIcon className="btn-icon icon-md" />
+            <span>Add Income</span>
           </button>
           <button className="btn-secondary" type="button" onClick={() => navigate('/add?type=expense')}>
-            <ArrowUpRightIcon className="btn-icon w-5 h-5" />
-            <span>Spend</span>
+            <ArrowUpRightIcon className="btn-icon icon-md" />
+            <span>Add Expense</span>
           </button>
         </nav>
       </section>
@@ -78,14 +78,14 @@ export default function Dashboard({ transactions, balance, categories }) {
 
         {filteredTransactions.length === 0 ? (
           <article className="empty-state">
-            <InboxIcon className="empty-icon w-8 h-8" />
+            <InboxIcon className="empty-icon icon-lg" />
             <p className="empty-text">
               {transactions.length === 0
                 ? 'No transactions logged yet.'
                 : 'No transactions match filters.'}
             </p>
             <button className="btn-primary" type="button" onClick={() => navigate('/add')}>
-              <PlusIcon className="w-4 h-4" />
+              <PlusIcon className="icon-sm" />
               <span>Add Transaction</span>
             </button>
           </article>
