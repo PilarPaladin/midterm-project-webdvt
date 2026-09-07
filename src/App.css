@@ -459,3 +459,95 @@
   height: 48px;
   flex-shrink: 0;
 }
+
+/* ==========================================================================
+   Desktop Unified Dashboard Styles
+   ========================================================================== */
+.desktop-layout {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--bg-secondary);
+}
+
+.desktop-sidebar {
+  width: 260px;
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6) var(--space-4);
+  justify-content: space-between;
+}
+
+.sidebar-brand .brand-logo {
+  font-size: 2rem;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.desktop-main {
+  flex: 1;
+  padding: var(--space-8);
+  height: 100vh;
+  overflow-y: auto;
+  background-color: var(--bg-primary);
+}
+
+.desktop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.desktop-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.desktop-stats {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.desktop-balance-card {
+  grid-column: span 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.desktop-transactions-card {
+  flex: 1;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.transactions-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: var(--space-2);
+}
+
+/* Custom Scrollbar for desktop scroll areas */
+.transactions-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+.transactions-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+.transactions-scroll-area::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: var(--radius-full);
+}
+
+/* W-full util */
+.w-full {
+  width: 100%;
+}

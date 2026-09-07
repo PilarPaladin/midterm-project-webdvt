@@ -2,11 +2,13 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useTransactions } from './hooks/useTransactions';
 import Dashboard from './pages/Dashboard';
+import DesktopDashboard from './pages/DesktopDashboard';
 import AddTransaction from './pages/AddTransaction';
 import TransactionDetail from './pages/TransactionDetail';
 import Summary from './pages/Summary';
 import Settings from './pages/Settings';
 import BottomNav from './components/BottomNav';
+import { useMediaQuery } from './hooks/useMediaQuery';
 import './App.css';
 
 export default function App() {
@@ -23,6 +25,23 @@ export default function App() {
     getTransaction,
     addCustomCategory,
   } = useTransactions();
+
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+
+  if (isDesktop) {
+    return (
+      <DesktopDashboard
+        transactions={transactions}
+        balance={balance}
+        categories={categories}
+        totalIncome={totalIncome}
+        totalExpense={totalExpense}
+        categorySpending={categorySpending}
+        addTransaction={addTransaction}
+        addCustomCategory={addCustomCategory}
+      />
+    );
+  }
 
   return (
     <div className="app-shell">
