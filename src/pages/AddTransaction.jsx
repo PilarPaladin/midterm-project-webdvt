@@ -90,7 +90,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
         <div className="type-toggle-tabs">
           <button
             type="button"
-            className={`btn-secondary ${type === 'expense' ? 'btn-primary' : ''}`}
+            className={type === 'expense' ? 'btn-primary' : 'btn-secondary'}
             onClick={() => setType('expense')}
             style={type === 'expense' ? { backgroundColor: 'var(--color-dark)' } : {}}
           >
@@ -98,7 +98,7 @@ export default function AddTransaction({ categories, addTransaction, addCustomCa
           </button>
           <button
             type="button"
-            className={`btn-secondary ${type === 'income' ? 'btn-primary' : ''}`}
+            className={type === 'income' ? 'btn-primary' : 'btn-secondary'}
             onClick={() => setType('income')}
             style={type === 'income' ? { backgroundColor: 'var(--color-green)' } : {}}
           >

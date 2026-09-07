@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.6rem 1.1rem;
+  padding: 0.6rem;
   border-radius: var(--radius-full);
   color: #a0aec0;
   text-decoration: none;
@@ -59,8 +59,17 @@
 }
 
 .nav-item-active {
+  padding: 0.6rem 1.1rem;
   background-color: var(--color-blue);
   color: #ffffff;
+}
+
+.nav-item .nav-label {
+  display: none;
+}
+
+.nav-item-active .nav-label {
+  display: block;
 }
 
 [data-theme='dark'] .nav-item-active {

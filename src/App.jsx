@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import AddTransaction from './pages/AddTransaction';
 import TransactionDetail from './pages/TransactionDetail';
 import Summary from './pages/Summary';
+import Settings from './pages/Settings';
 import BottomNav from './components/BottomNav';
 import './App.css';
 
@@ -70,6 +71,7 @@ export default function App() {
               />
             }
           />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>
 

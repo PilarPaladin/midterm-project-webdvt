@@ -4,6 +4,7 @@ import {
   HomeIcon,
   PlusCircleIcon,
   ChartPieIcon,
+  Cog6ToothIcon,
 } from '@heroicons/react/24/solid';
 import './BottomNav.css';
 
@@ -40,6 +41,16 @@ export default function BottomNav() {
         >
           <ChartPieIcon className="nav-icon" />
           <span className="nav-label">Summary</span>
+        </NavLink>
+
+        <NavLink
+          to="/settings"
+          className={({ isActive }) =>
+            `nav-item ${isActive ? 'nav-item-active' : ''}`
+          }
+        >
+          <Cog6ToothIcon className="nav-icon" />
+          <span className="nav-label">Settings</span>
         </NavLink>
       </div>
     </nav>
