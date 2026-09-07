@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LedgerLines - Global Design Tokens & Theme Setup (Strict 8pt System)
+   LedgerLines - Global Design Tokens & Theme Setup
    ========================================================================== */
 
 :root {
@@ -40,9 +40,9 @@
   /* --- Light Theme (Default) --- */
   --bg-primary: var(--color-light);
   --bg-secondary: #ffffff;
-  --border-color: #d1d5db; /* Semantic light border */
+  --border-color: #d1d5db; 
   --text-primary: var(--color-dark);
-  --text-secondary: #4b5563; /* Tailwind gray-600 equivalent */
+  --text-secondary: #4b5563;
 
   --card-bg: var(--color-gray);
   
@@ -52,15 +52,16 @@
 
   --income-color: var(--color-green);
   --expense-color: var(--color-dark);
+  --action-color: var(--color-blue);
 }
 
 /* --- Dark Theme Mapping --- */
 [data-theme='dark'] {
   --bg-primary: var(--color-dark);
   --bg-secondary: #1f232c;
-  --border-color: #374151; /* Semantic dark border */
+  --border-color: #374151;
   --text-primary: var(--color-light);
-  --text-secondary: #9ca3af; /* Tailwind gray-400 equivalent */
+  --text-secondary: #9ca3af;
 
   --card-bg: #353b49;
   
@@ -70,6 +71,7 @@
 
   --income-color: #5ec480;
   --expense-color: var(--color-light);
+  --action-color: #72a3d9;
 }
 
 /* ==========================================================================

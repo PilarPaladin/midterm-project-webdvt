@@ -83,6 +83,11 @@ export default function TransactionDetail({ getTransaction, updateTransaction, d
     setIsEditing(false);
   };
 
+  const handleDelete = () => {
+    deleteTransaction(id);
+    navigate('/');
+  };
+
   const isIncome = transaction.type === 'income';
   const formattedAmt = Math.abs(Number(transaction.amount) || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
@@ -142,9 +147,9 @@ export default function TransactionDetail({ getTransaction, updateTransaction, d
               <textarea id="edit-notes" rows={2} className="form-input" value={notes} onChange={(e) => setNotes(e.target.value)} />
             </div>
 
-            <div style={{ display: 'flex', gap: '8px', marginTop: '8px' }}>
+            <div style={{ display: 'flex', gap: '8px', marginTop: '16px' }}>
               <button type="button" className="btn-secondary" style={{ flex: 1 }} onClick={() => setIsEditing(false)}>Cancel</button>
-              <button type="submit" className="btn-primary" style={{ flex: 2 }}><CheckIcon className="icon-sm mr-1 inline" /> Save Changes</button>
+              <button type="submit" className="btn-primary" style={{ flex: 2 }}><CheckIcon className="icon-sm" /> Save Changes</button>
             </div>
           </form>
         ) : (
@@ -178,9 +183,9 @@ export default function TransactionDetail({ getTransaction, updateTransaction, d
               )}
             </div>
 
-            <footer className="detail-actions">
-              <button type="button" className="btn-destructive" style={{ width: '100%' }} onClick={() => setShowDeleteConfirm(true)}>
-                <TrashIcon className="icon-sm mr-1 inline" /> Delete Transaction
+            <footer className="detail-actions" style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
+              <button type="button" className="btn-destructive" onClick={() => setShowDeleteConfirm(true)}>
+                <TrashIcon className="icon-sm" /> Delete Transaction
               </button>
             </footer>
           </article>
